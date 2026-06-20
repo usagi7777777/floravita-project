@@ -1,0 +1,14 @@
+# macOS
+.DS_Store
+
+# エディタ / IDE
+.vscode/
+.idea/
+*.swp
+
+# ログ・一時ファイル
+*.log
+tmp/
+
+# OS / その他
+Thumbs.db

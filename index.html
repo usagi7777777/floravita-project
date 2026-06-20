@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Floravita（フロラヴィータ）は、植物療法・メディカルハーブ・自然療法に関する情報発信とオンライン相談を行うウェルネスブランドです。">
+  <title>Floravita｜植物とともにある、やさしい暮らし</title>
+
+  <!-- OGP / Twitter Card（SNSシェア用）。og:url と画像URLは公開ドメインに合わせて絶対URLへ差し替えてください -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Floravita">
+  <meta property="og:title" content="Floravita｜植物とともにある、やさしい暮らし">
+  <meta property="og:description" content="植物療法・メディカルハーブ・自然療法の知恵を、毎日のセルフケアに。情報発信とオンライン相談の場です。">
+  <meta property="og:image" content="images/screenshot.png">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Floravita｜植物とともにある、やさしい暮らし">
+  <meta name="twitter:description" content="植物療法・メディカルハーブ・自然療法の知恵を、毎日のセルフケアに。">
+  <meta name="twitter:image" content="images/screenshot.png">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- テーマの初期適用（ちらつき防止のため描画前に実行） -->
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('floravita-theme');
+        if (!t) t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', t);
+      } catch (e) { /* 失敗時はライトのまま */ }
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- ===== ヘッダー / ナビゲーション ===== -->
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a href="#top" class="brand">
+        <span class="brand-mark" aria-hidden="true">❧</span>
+        <span class="brand-text">Floravita</span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="メニューを開閉" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="site-nav" id="siteNav">
+        <a href="#services">サービス</a>
+        <a href="#blog">読みもの</a>
+        <a href="herbs.html">ハーブ図鑑</a>
+        <a href="#about">Floravitaについて</a>
+        <a href="#contact" class="nav-cta">相談する</a>
+        <button class="theme-toggle" id="themeToggle" type="button" aria-pressed="false" aria-label="ダークモードに切り替え">🌙</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== ヒーロー ===== -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <p class="hero-eyebrow">Phytotherapy &amp; Medical Herbs</p>
+      <h1 class="hero-title">植物とともにある、<br>やさしい暮らしへ。</h1>
+      <p class="hero-lead">
+        メディカルハーブや自然療法の知恵を、毎日のセルフケアに。<br>
+        Floravitaは、植物のちからを学び、暮らしに取り入れるための<br class="pc-only">
+        情報発信とオンライン相談の場です。
+      </p>
+      <div class="hero-actions">
+        <a href="#services" class="btn btn-primary">サービスを見る</a>
+        <button class="btn btn-ghost" id="openIntro">はじめての方へ</button>
+      </div>
+    </div>
+    <div class="hero-glow" aria-hidden="true"></div>
+  </section>
+
+  <!-- ===== サービス ===== -->
+  <section class="section" id="services">
+    <div class="container">
+      <p class="section-eyebrow">Services</p>
+      <h2 class="section-title">Floravitaのサービス</h2>
+      <p class="section-desc">植物療法を「知る」「相談する」「続ける」の3つの入り口からサポートします。</p>
+
+      <div class="card-grid">
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">🌿</div>
+          <h3>ハーブを学ぶ</h3>
+          <p>メディカルハーブの基礎知識や、季節に寄り添う植物の使い方を、わかりやすい記事でお届けします。</p>
+        </article>
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">🍵</div>
+          <h3>オンライン相談</h3>
+          <p>暮らしのお悩みに合わせて、ハーブティーやセルフケアの取り入れ方を一緒に考えるオンライン相談です。</p>
+        </article>
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">🌸</div>
+          <h3>季節のレシピ</h3>
+          <p>ブレンドティーやハーブを使った簡単なレシピを、季節ごとにご提案します。続けやすさを大切にしています。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 読みもの / ブログ枠 ===== -->
+  <section class="section section-alt" id="blog">
+    <div class="container">
+      <p class="section-eyebrow">Journal</p>
+      <h2 class="section-title">読みもの</h2>
+      <p class="section-desc">植物療法やハーブのある暮らしについて綴ります。気になるテーマをのぞいてみてください。</p>
+
+      <!-- カテゴリ絞り込み（1つのリストを絞り込むフィルタのため、tab/tabpanelではなくトグルボタン群として実装） -->
+      <div class="tabs" role="group" aria-label="読みものをカテゴリで絞り込み">
+        <button class="tab is-active" data-tab="all" aria-pressed="true">すべて</button>
+        <button class="tab" data-tab="herb" aria-pressed="false">ハーブ</button>
+        <button class="tab" data-tab="life" aria-pressed="false">暮らし</button>
+        <button class="tab" data-tab="season" aria-pressed="false">季節</button>
+      </div>
+
+      <!-- カードは data/articles.js のデータから script.js が動的に生成します -->
+      <div class="blog-grid" id="blogGrid" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <!-- ===== Floravitaについて ===== -->
+  <section class="section" id="about">
+    <div class="container about-inner">
+      <div class="about-text">
+        <p class="section-eyebrow">About</p>
+        <h2 class="section-title">Floravitaについて</h2>
+        <p>
+          Floravita（フロラヴィータ）は、「花・植物（Flora）」と「いのち・暮らし（Vita）」を合わせた名前です。
+          植物療法やメディカルハーブの知恵を、専門用語に頼りすぎず、毎日の暮らしに無理なく取り入れられる形でお届けすることを大切にしています。
+        </p>
+        <p>
+          情報発信とオンライン相談を通じて、あなたが自分のからだと心の声に耳を澄ませる時間を、そっと後押しできればと考えています。
+        </p>
+        <ul class="about-points">
+          <li>植物のある暮らしを、やさしく・わかりやすく</li>
+          <li>一人ひとりのペースに寄り添う相談</li>
+          <li>続けやすいセルフケアの提案</li>
+        </ul>
+      </div>
+      <div class="about-figure" aria-hidden="true">
+        <div class="leaf-card">
+          <span class="leaf">🌿</span>
+          <p>Flora &times; Vita</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== お問い合わせ / 相談 ===== -->
+  <section class="section section-alt" id="contact">
+    <div class="container contact-inner">
+      <p class="section-eyebrow">Contact</p>
+      <h2 class="section-title">相談・お問い合わせ</h2>
+      <p class="section-desc">オンライン相談やお問い合わせはこちらから。練習用プロジェクトのため、フォームは送信デモのみです。</p>
+
+      <form class="contact-form" id="contactForm" novalidate>
+        <div class="field">
+          <label for="name">お名前</label>
+          <input type="text" id="name" name="name" placeholder="山田 花子" required>
+        </div>
+        <div class="field">
+          <label for="email">メールアドレス</label>
+          <input type="email" id="email" name="email" placeholder="hana@example.com" required>
+        </div>
+        <div class="field">
+          <label for="message">ご相談内容</label>
+          <textarea id="message" name="message" rows="4" placeholder="気になっていることをお聞かせください。"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">送信する（デモ）</button>
+        <p class="form-note" id="formNote" hidden>ありがとうございます。これはデモのため、実際には送信されません。</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== フッター ===== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="brand-mark" aria-hidden="true">❧</span> Floravita
+        <p class="footer-tagline">植物とともにある、やさしい暮らしへ。</p>
+      </div>
+      <nav class="footer-nav">
+        <a href="#services">サービス</a>
+        <a href="#blog">読みもの</a>
+        <a href="#about">Floravitaについて</a>
+        <a href="#contact">相談する</a>
+      </nav>
+    </div>
+    <p class="footer-note">
+      ※本サイトは練習用デモです。掲載情報は一般的な知識の紹介であり、医療行為・診断・治療を目的とするものではありません。体調に不安がある場合は医療機関にご相談ください。
+    </p>
+    <p class="copyright">&copy; 2026 Floravita (practice project)</p>
+  </footer>
+
+  <!-- ===== ポップアップ（モーダル） ===== -->
+  <div class="modal-overlay" id="introModal" hidden>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="closeIntro" aria-label="閉じる">&times;</button>
+      <span class="modal-mark" aria-hidden="true">🌿</span>
+      <h2 id="modalTitle">はじめての方へ</h2>
+      <p>
+        Floravitaへようこそ。ここは植物療法やメディカルハーブの知恵を、
+        暮らしにやさしく取り入れるための情報発信＆相談スペースです。
+      </p>
+      <p>まずは「読みもの」から、気になるテーマをのぞいてみてください。</p>
+      <a href="#blog" class="btn btn-primary" id="modalToBlog">読みものを見る</a>
+    </div>
+  </div>
+
+  <script src="data/articles.js"></script>
+  <script src="script.js"></script>
+  <!-- ui.js は動的生成（カード等）の後に読み込み、演出対象に含める -->
+  <script src="ui.js"></script>
+</body>
+</html>

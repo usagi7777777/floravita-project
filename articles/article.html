@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Floravitaの読みもの。植物療法・メディカルハーブのある暮らしについての記事です。">
+  <title>読みもの｜Floravita</title>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+
+  <!-- テーマの初期適用（ちらつき防止のため描画前に実行） -->
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('floravita-theme');
+        if (!t) t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', t);
+      } catch (e) { /* 失敗時はライトのまま */ }
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- ===== ヘッダー ===== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="../index.html" class="brand">
+        <span class="brand-mark" aria-hidden="true">❧</span>
+        <span class="brand-text">Floravita</span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="メニューを開閉" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="site-nav" id="siteNav">
+        <a href="../index.html#services">サービス</a>
+        <a href="../index.html#blog">読みもの</a>
+        <a href="../herbs.html">ハーブ図鑑</a>
+        <a href="../index.html#about">Floravitaについて</a>
+        <a href="../index.html#contact" class="nav-cta">相談する</a>
+        <button class="theme-toggle" id="themeToggle" type="button" aria-pressed="false" aria-label="ダークモードに切り替え">🌙</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== 記事本文（data/articles.js から JS で描画） ===== -->
+  <main class="article-page">
+    <div class="container article-container">
+      <a class="article-back" href="../index.html#blog">← 読みもの一覧へ戻る</a>
+      <article id="articleRoot" aria-live="polite">
+        <p class="article-eyebrow">Loading…</p>
+      </article>
+    </div>
+  </main>
+
+  <!-- ===== フッター ===== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="brand-mark" aria-hidden="true">❧</span> Floravita
+        <p class="footer-tagline">植物とともにある、やさしい暮らしへ。</p>
+      </div>
+      <nav class="footer-nav">
+        <a href="../index.html#services">サービス</a>
+        <a href="../index.html#blog">読みもの</a>
+        <a href="../index.html#about">Floravitaについて</a>
+        <a href="../index.html#contact">相談する</a>
+      </nav>
+    </div>
+    <p class="footer-note">
+      ※本サイトは練習用デモです。掲載情報は一般的な知識の紹介であり、医療行為・診断・治療を目的とするものではありません。体調に不安がある場合は医療機関にご相談ください。
+    </p>
+    <p class="copyright">&copy; 2026 Floravita (practice project)</p>
+  </footer>
+
+  <script src="../data/articles.js"></script>
+  <script src="article.js"></script>
+  <!-- ui.js は記事描画の後に読み込み、演出対象に含める -->
+  <script src="../ui.js"></script>
+</body>
+</html>
